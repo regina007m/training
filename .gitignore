@@ -1,0 +1,13 @@
+# Ignores compiled code.
+app/dist/*
+
+# OS generated files #
+.DS_Store*
+ehthumbs.db
+Icon
+
+Thumbs.db
+._*
+
+# SASS #
+.sass-cache
