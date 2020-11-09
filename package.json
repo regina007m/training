@@ -4,7 +4,8 @@
   "description": "Basic app for front-end training",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulp",
+    "watch": "gulp watch"
   },
   "keywords": [
     "frontend"
