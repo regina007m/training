@@ -1,0 +1,23 @@
+{
+  "name": "fe_training",
+  "version": "1.0.0",
+  "description": "Basic app for front-end training",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "frontend"
+  ],
+  "author": "Mario Hernandez",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^9.0.0",
+    "browser-sync": "^2.26.13",
+    "cssnano": "^4.1.10",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^9.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^2.6.5"
+  }
+}
