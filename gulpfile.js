@@ -3,27 +3,27 @@
 'use strict';
 
 // Set variables for all node tools.
-var gulp = require("gulp"),
-    sass = require("gulp-sass"),
-    postcss = require("gulp-postcss"),
-    autoprefixer = require("autoprefixer"),
-    cssnano = require("cssnano"),
-    sourcemaps = require("gulp-sourcemaps"),
-    browserSync = require("browser-sync").create();
+var gulp = require('gulp'),
+    sass = require('gulp-sass'),
+    postcss = require('gulp-postcss'),
+    autoprefixer = require('autoprefixer'),
+    cssnano = require('cssnano'),
+    sourcemaps = require('gulp-sourcemaps'),
+    browserSync = require('browser-sync').create();
 
 // Creates standard paths for asset locations.
 var paths = {
   css: {
-    src: "app/src/scss/*.scss",
-    dest: "app/dist/css"
+    src: 'app/src/scss/*.scss',
+    dest: 'app/dist/css'
   },
   js: {
-    src: "app/src/js/*.js",
-    dest: "app/dist/js"
+    src: 'app/src/js/*.js',
+    dest: 'app/dist/js'
   },
   html: {
-    src: "app/src/*.html",
-    dest: "app/dist"
+    src: 'app/src/*.html',
+    dest: 'app/dist'
   }
 };
 
@@ -34,7 +34,7 @@ function styles() {
     .src(paths.css.src)
     .pipe(sourcemaps.init())
     .pipe(sass())
-    .on("error", sass.logError)
+    .on('error', sass.logError)
     .pipe(postcss([autoprefixer(), cssnano()]))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(paths.css.dest))
@@ -57,11 +57,11 @@ function html() {
     .pipe(browserSync.stream());
 }
 
-// Creates a web server by initializing browserSync.
+// Creates a watch task and reloads page with browserSync.
 function watch() {
   browserSync.init({
     server: {
-      baseDir: "./app/dist"
+      baseDir: './app/dist'
     }
   });
 
@@ -80,4 +80,4 @@ exports.scripts = scripts;
 var build = gulp.parallel(styles, scripts, html, watch);
 
 // Creates default task.
-gulp.task("default", build);
+gulp.task('default', build);
