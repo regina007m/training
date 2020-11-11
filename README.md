@@ -4,15 +4,13 @@ This is a hands-on training workshop on fundamentals of Front-end.  The codebase
 
 
 ### Project Setup
+- Install LTS version of [NodeJS & NPM](https://nodejs.org), (both are include in single package)<br />
+
 - Clone this repo: <br />`git clone https://github.com/mariohernandez/fe_training.git`
 
-- Install [NodeJS](https://nodejs.org) & dependencies (one command per line): <br />
+- Install  the NodeJS dependencies (one command per line): <br />
   ```
   cd fe_training
-
-  nvm install
-
-  nvm use
 
   npm install
   ```
